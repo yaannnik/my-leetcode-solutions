@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=94 lang=cpp
+ * @lc app=leetcode.cn id=99 lang=cpp
  *
- * [94] 二叉树的中序遍历
+ * [99] 恢复二叉搜索树
  */
 
 // @lc code=start
@@ -18,20 +18,34 @@
  */
 class Solution {
 public:
-    vector<int> res;
-    vector<int> inorderTraversal(TreeNode* root) {
+    void recoverTree(TreeNode* root) {
         stack<TreeNode*> st;
+        TreeNode* x = nullptr;
+        TreeNode* y = nullptr;
+        TreeNode* pred = nullptr;
         while(root || !st.empty()) {
             while(root) {
                 st.push(root);
                 root = root->left;
             }
+            // pop out the inorder node
             root = st.top();
             st.pop();
-            res.push_back(root->val);
+            if(pred && pred->val > root->val) {
+                // the last wrong place
+                y = root;
+                if(!x) {
+                    // the first wrong place
+                    x = pred;
+                }
+                else {
+                    break;
+                }
+            }
+            pred = root;
             root = root->right;
         }
-        return res;
+        swap(x->val, y->val);
     }
 };
 // @lc code=end
