@@ -21,17 +21,15 @@ public:
         if(head == nullptr) {
             return head;
         }
-        ListNode* new_head = head;
-        ListNode* p = nullptr;
-        ListNode* n = new_head->next;
-        while(n != nullptr) {
-            new_head->next = p;
-            p = new_head;
-            new_head = n;
-            n = n->next;
+        ListNode* H = new ListNode(-1, nullptr);
+        ListNode* ptr = head;
+        while(ptr) {
+            ListNode* tmp = ptr;
+            ptr = ptr->next;
+            tmp->next = H->next;
+            H->next = tmp;
         }
-        new_head->next = p;
-        return new_head;
+        return H->next;
     }
 };
 // @lc code=end
