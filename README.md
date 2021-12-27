@@ -23,3 +23,7 @@
 [46.全排列](./Depth-First-Search/46.全排列.cpp)
 
 [47.全排列-ii](./Depth-First-Search/47.全排列-ii.cpp)
+
+[51.n-皇后](./Depth-First-Search/51.n-皇后.cpp)
+
+[52.n皇后-ii](./Depth-First-Search/52.n皇后-ii.cpp)
