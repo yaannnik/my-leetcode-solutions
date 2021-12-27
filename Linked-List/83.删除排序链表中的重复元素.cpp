@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=83 lang=cpp
- *
- * [83] 删除排序链表中的重复元素
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -18,19 +11,17 @@
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        if(!head) return head;
-        ListNode* node1 = head;
-        while(node1->next) {
-            ListNode* node2 = node1->next;
-            if(node2->val == node1->val) {
-                node1->next = node2->next;
-                delete node2;
+        ListNode* ptr = head;
+        if(!ptr) {
+            return head;
+        }
+        while(ptr->next) {
+            if(ptr->next->val == ptr->val) {
+                ptr->next = ptr->next->next;
             } else {
-                node1 = node2;
+                ptr = ptr->next;
             }
         }
         return head;
     }
 };
-// @lc code=end
-

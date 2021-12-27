@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=21 lang=cpp
- *
- * [21] 合并两个有序链表
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -17,24 +10,23 @@
  */
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if(!l1 || !l2) return l1 ? l1 : l2;
-        ListNode* p1 = l1, * p2 = l2;
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         ListNode* res = new ListNode(-1);
-        ListNode* p = res;
+        ListNode* p1 = list1, * p2 = list2, * pr = res;
+
         while(p1 && p2) {
             if(p1->val <= p2->val) {
-                p->next = p1;
+                pr->next = new ListNode(p1->val);
                 p1 = p1->next;
             } else {
-                p->next = p2;
+                pr->next = new ListNode(p2->val);
                 p2 = p2->next;
             }
-            p = p->next;
+            pr = pr->next;
         }
-        p->next = p1 ? p1 : p2;
+
+        pr->next = p1 ? p1 : p2;
+
         return res->next;
     }
 };
-// @lc code=end
-
