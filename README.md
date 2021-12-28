@@ -27,3 +27,9 @@
 [51.n-皇后](./Depth-First-Search/51.n-皇后.cpp)
 
 [52.n皇后-ii](./Depth-First-Search/52.n皇后-ii.cpp)
+
+[77.组合](./Depth-First-Search/77.组合.cpp)
+
+[78.子集](./Depth-First-Search/78.子集.cpp)
+
+[90.子集-ii](./Depth-First-Search/90.子集-ii.cpp)
