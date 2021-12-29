@@ -17,7 +17,7 @@ public:
             return;
         }
 
-        for(int i = idx; i < n; i++) {
+        for(int i = idx; i < n - (k - tmp.size() -1); i++) {
             tmp.emplace_back(i+1);
             dfs(n, k, tmp, i+1);
             tmp.erase(tmp.end()-1);
