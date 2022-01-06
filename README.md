@@ -14,6 +14,22 @@
 
 [83.删除排序链表中的重复元素](./Linked-List/83.删除排序链表中的重复元素.cpp)
 
+[86.分隔链表](./Linked-List/86.分隔链表.cpp)
+
+[141.环形链表](./Linked-List/141.环形链表.cpp)
+
+[142.环形链表-ii](./Linked-List/142.环形链表-ii.cpp)
+
+[160.相交链表](./Linked-List/160.相交链表.cpp)
+
+[234.回文链表](./Linked-List/234.回文链表.cpp)
+
+[287.寻找重复数](./Linked-List/287.寻找重复数.cpp)
+
+[328.奇偶链表](./Linked-List/328.奇偶链表.cpp)
+
+[876.链表的中间节点](./Linked-List/876.链表的中间节点.cpp)
+
 
 
 ## Depth-First-Search
@@ -35,6 +51,8 @@
 [78.子集](./Depth-First-Search/78.子集.cpp)
 
 [90.子集-ii](./Depth-First-Search/90.子集-ii.cpp)
+
+[131.分割回文串](./Depth-First-Search/131.分割回文串.cpp)
 
 
 
