@@ -108,11 +108,35 @@
 
 
 
+## Monotonic Stack
+
+[42.接雨水](Monotonic-Stack/42.接雨水.cpp)
+
+[84.柱状图中最大的矩形](Monotonic-Stack/84.柱状图中最大的矩形.cpp)
+
+[239.滑动窗口最大值](Monotonic-Stack/239.滑动窗口最大值.cpp)
+
+[316.去除重复字母](./Monotonic-Stack/316.去除重复字母.cpp)
+
+[402.移掉K位数字](./Monotonic-Stack/402.移掉K位数字.cpp)
+
+[496.下一个更大元素-i](./Monotonic-Stack/496.下一个更大元素-i.cpp)
+
+[503.下一个更大元素-ii](./Monotonic-Stack/503.下一个更大元素-ii.cpp)
+
+[581.最短无序连续子数组](./Monotonic-Stack/581.最短无序连续子数组.cpp)
+
+[739.每日温度](./Monotonic-Stack/739.每日温度.cpp)
+
+[901.股票价格跨度](./Monotonic-Stack/901.股票价格跨度.cpp)
+
+[1019.链表中的下一个更大节点](Monotonic-Stack/1019.链表中的下一个更大节点.cpp)
+
+
+
 ## Sort
 
 [26.删除有序数组中的重复项](./Sort/26.删除有序数组中的重复项.cpp)
-
-[42.接雨水](./Sort/42.接雨水.cpp)
 
 [43.字符串相乘](./Sort/43.字符串相乘.cpp)
 
