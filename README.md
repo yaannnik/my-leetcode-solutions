@@ -88,9 +88,17 @@
 
 
 
+## Dynamic Programming
+
+[121.买卖股票的最佳时机](./Dynamic-Programming/121.买卖股票的最佳时机.cpp)
+
+
+
 ## Hash Map
 
 [1.两数之和](./Hash-Map/1.两数之和.cpp)
+
+[560.和为K的子数组](./Hash-Map/560.和为K的子数组.cpp)
 
 
 
