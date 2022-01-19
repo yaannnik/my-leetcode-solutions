@@ -5,7 +5,7 @@
 #ifndef LEETCODE_SOLUTION_UNIONFIND_H
 #define LEETCODE_SOLUTION_UNIONFIND_H
 
-#include<vector>
+#include <vector>
 using namespace std;
 
 class UnionFind {

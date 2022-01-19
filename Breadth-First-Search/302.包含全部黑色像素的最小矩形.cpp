@@ -1,6 +1,6 @@
-#include<vector>
-#include<utility>
-#include<queue>
+#include <vector>
+#include <utility>
+#include <queue>
 using namespace std;
 
 class Solution {

@@ -1,16 +1,10 @@
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#include "ListNode.h"
 
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* res = new ListNode(-1);
-        ListNode* p1 = l1, *p2 = l2, *pr = res;
+        auto* res = new ListNode(-1);
+        ListNode *p1 = l1, *p2 = l2, *pr = res;
         int add = 0;
         while(p1 && p2) {
             pr->next = new ListNode((p1->val + p2->val + add) % 10);

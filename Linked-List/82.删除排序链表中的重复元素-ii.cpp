@@ -1,10 +1,4 @@
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#include "ListNode.h"
 
 class Solution {
 public:
@@ -12,7 +6,7 @@ public:
         if(!head || !head->next) {
             return head;
         }
-        ListNode* dummy = new ListNode(-101), *ptr = head, *pd = dummy;
+        ListNode *dummy = new ListNode(-101), *ptr = head, *pd = dummy;
         dummy->next = head;
         int pre = -101;
         while(ptr) {

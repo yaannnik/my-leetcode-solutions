@@ -1,10 +1,4 @@
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#include "ListNode.h"
 
 class Solution {
 public:
@@ -12,7 +6,7 @@ public:
         if(!head) {
             return nullptr;
         }
-        ListNode* even = new ListNode(-1, nullptr), *tmp = even;
+        ListNode *even = new ListNode(-1, nullptr), *tmp = even;
         ListNode* ptr = head;
         //两种情况：ptr位于最后一个或者倒数第二个
         while(ptr->next && ptr->next->next) {

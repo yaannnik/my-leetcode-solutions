@@ -1,10 +1,4 @@
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#include "ListNode.h"
 
 class Solution {
 public:
@@ -12,7 +6,7 @@ public:
         if(!head->next) {
             return true;
         }
-        ListNode* slow = head, *fast = head;
+        ListNode *slow = head, *fast = head;
         ListNode* H = new ListNode(-1, nullptr);
         //翻转前半个链表
         while(fast && fast->next) {
@@ -27,7 +21,7 @@ public:
         if(fast) {
             slow = slow->next;
         }
-        ListNode* p1 = H->next, *p2 = slow;
+        ListNode *p1 = H->next, *p2 = slow;
         while(p2) {
             if(p1->val != p2->val) {
                 return false;

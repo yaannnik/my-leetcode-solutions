@@ -1,4 +1,4 @@
-#include<unordered_map>
+#include <unordered_map>
 using namespace std;
 
 struct Node {
@@ -70,7 +70,7 @@ public:
     }
 
     unordered_map<int, Node*> cache;
-    Node* head, *tail;
+    Node *head, *tail;
     int size, cap;
 };
 

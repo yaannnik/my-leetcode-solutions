@@ -1,6 +1,6 @@
-#include<vector>
-#include<stack>
-#include<unordered_map>
+#include <vector>
+#include <stack>
+#include <unordered_map>
 using namespace std;
 
 class Solution {

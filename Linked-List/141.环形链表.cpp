@@ -1,8 +1,4 @@
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
+#include "ListNode.h"
 
 class Solution {
 public:
@@ -10,7 +6,7 @@ public:
         if(!head) {
             return false;
         }
-        ListNode* slow = head, *fast = head;
+        ListNode *slow = head, *fast = head;
         //快指针前进两步的边界条件
         while(fast && fast->next) {
             fast = fast->next->next;

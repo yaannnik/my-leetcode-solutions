@@ -1,5 +1,5 @@
-#include<vector>
-#include<queue>
+#include <vector>
+#include <queue>
 using namespace std;
 
 class Solution {
@@ -41,6 +41,7 @@ public:
     }
 
     void mergeSort(vector<int>& nums, int left, int right, vector<int>& tmp) {
+        // one element remaining
         if(left >= right) {
             return;
         }

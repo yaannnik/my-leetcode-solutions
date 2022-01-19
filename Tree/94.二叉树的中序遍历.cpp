@@ -1,5 +1,5 @@
-#include<vector>
-#include<stack>
+#include <vector>
+#include <stack>
 using namespace std;
 
 struct TreeNode {

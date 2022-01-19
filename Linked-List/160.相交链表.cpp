@@ -1,16 +1,12 @@
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
+#include "ListNode.h"
 
 class Solution {
 public:
-    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
         if(!headA || !headB) {
             return nullptr;
         }
-        ListNode* ptrA = headA, *ptrB = headB;
+        ListNode *ptrA = headA, *ptrB = headB;
         int lenA = ListLen(ptrA);
         int lenB = ListLen(ptrB);
 
