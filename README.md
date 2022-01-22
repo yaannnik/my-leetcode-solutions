@@ -4,7 +4,11 @@
 
 ## Array
 
+[48.旋转图像](./Array/48.旋转图像.cpp)
+
 [56.合并区间](./Array/56.合并区间.cpp)
+
+[204.计数质数](./Array/204.计数质数.cpp)
 
 
 
@@ -52,6 +56,8 @@
 
 [444.重建序列](./Breadth-First-Search/444.重建序列.cpp)
 
+[1761.一个图中连通三元组的最小度数](./Breadth-First-Search/1761.一个图中连通三元组的最小度数.cpp)
+
 
 
 ## Depth First Search
@@ -80,6 +86,8 @@
 
 [131.分割回文串](./Depth-First-Search/131.分割回文串.cpp)
 
+[212.单词搜索-ii](./Depth-First-Search/212.单词搜索-ii.cpp)
+
 [254.因子的组合](./Depth-First-Search/254.因子的组合.cpp)
 
 [301.删除无效的括号](./Depth-First-Search/301.删除无效的括号.cpp)
@@ -90,6 +98,8 @@
 
 ## Dynamic Programming
 
+[53.最大子数组和](./Dynamic-Programming/53.最大子数组和.cpp)
+
 [121.买卖股票的最佳时机](./Dynamic-Programming/121.买卖股票的最佳时机.cpp)
 
 
@@ -99,6 +109,8 @@
 [1.两数之和](./Hash-Map/1.两数之和.cpp)
 
 [560.和为K的子数组](./Hash-Map/560.和为K的子数组.cpp)
+
+[1010.总持续时间可被-60-整除的歌曲](./Hash-Map/1010.总持续时间可被-60-整除的歌曲.cpp)
 
 
 
@@ -219,6 +231,22 @@
 ## Stack
 
 [1249.移除无效的括号](./Stack/1249.移除无效的括号.cpp)
+
+
+
+## String
+
+[91.解码方法](./String/91.解码方法.cpp)
+
+[394.字符串解码](./String/394.字符串解码.cpp)
+
+[423.从英文中重建数字](./String/423.从英文中重建数字.cpp)
+
+[468.验证IP地址](./String/468.验证IP地址.cpp)
+
+[809.感情丰富的文字](./String/809.感情丰富的文字.cpp)
+
+[811.子域名访问计数](./String/811.子域名访问计数.cpp)
 
 
 

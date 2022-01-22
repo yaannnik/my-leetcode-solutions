@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=1010 lang=cpp
- *
- * [1010] 总持续时间可被 60 整除的歌曲
- */
+#include <vector>
+#include <unordered_map>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int numPairsDivisibleBy60(vector<int>& time) {
