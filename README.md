@@ -56,6 +56,8 @@
 
 [444.重建序列](./Breadth-First-Search/444.重建序列.cpp)
 
+[815.公交路线](./Breadth-First-Search/815.公交路线.cpp)
+
 [1761.一个图中连通三元组的最小度数](./Breadth-First-Search/1761.一个图中连通三元组的最小度数.cpp)
 
 
@@ -98,15 +100,21 @@
 
 ## Dynamic Programming
 
+[5.最长回文子串](./Dynamic-Programming/5.最长回文子串.cpp)
+
 [53.最大子数组和](./Dynamic-Programming/53.最大子数组和.cpp)
 
 [121.买卖股票的最佳时机](./Dynamic-Programming/121.买卖股票的最佳时机.cpp)
+
+[1235.规划兼职工作](./Dynamic-Programming/1235.规划兼职工作.cpp)
 
 
 
 ## Hash Map
 
 [1.两数之和](./Hash-Map/1.两数之和.cpp)
+
+[138.复制带随机指针的链表](./Hash-Map/138.复制带随机指针的链表.cpp)
 
 [560.和为K的子数组](./Hash-Map/560.和为K的子数组.cpp)
 
@@ -235,6 +243,8 @@
 
 
 ## String
+
+[68.文本左右对齐](./String/68.文本左右对齐.cpp)
 
 [91.解码方法](./String/91.解码方法.cpp)
 
