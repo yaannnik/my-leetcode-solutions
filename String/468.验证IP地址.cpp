@@ -21,7 +21,7 @@ public:
     }
 
     string checkIpV4(string& ip) {
-        istringstream in(ip);
+        stringstream in(ip);
         for(int i = 0; i < 4; i++) {
             string piece;
             getline(in, piece, '.');
@@ -41,7 +41,7 @@ public:
     }
 
     string checkIpV6(string& ip){
-        istringstream in(ip);
+        stringstream in(ip);
         for(int i=0;i < 8; i++){
             string piece;
             getline(in,piece,':');

@@ -20,10 +20,10 @@ public:
 
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
-        std::stringstream ss(data);
-        std::string item;
+        stringstream ss(data);
+        string item;
         queue<string> qu;
-        while (std::getline(ss, item, ',')) {
+        while (getline(ss, item, ',')) {
             qu.push(item);
         }
         TreeNode* root = helper(qu);
