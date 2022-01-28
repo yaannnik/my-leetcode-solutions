@@ -33,10 +33,10 @@ public:
                     }
                 }
             }
-            for(auto& rich : lower[top]) {
-                degree[rich]--;
-                if(degree[rich] == 0) {
-                    qu.push(rich);
+            for(auto& l : lower[top]) {
+                degree[l]--;
+                if(degree[l] == 0) {
+                    qu.push(l);
                 }
             }
         }
