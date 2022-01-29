@@ -72,6 +72,8 @@
 
 [1761.一个图中连通三元组的最小度数](./Breadth-First-Search/1761.一个图中连通三元组的最小度数.cpp)
 
+[1765.地图中的最高点](./Breadth-First-Search/1765.地图中的最高点.cpp)
+
 
 
 ## Depth First Search
@@ -119,6 +121,14 @@
 [53.最大子数组和](./Dynamic-Programming/53.最大子数组和.cpp)
 
 [121.买卖股票的最佳时机](./Dynamic-Programming/121.买卖股票的最佳时机.cpp)
+
+[122.买卖股票的最佳时机-ii](./Dynamic-Programming/122.买卖股票的最佳时机-ii.cpp)
+
+[123.买卖股票的最佳时机-iii](./Dynamic-Programming/123.买卖股票的最佳时机-iii.cpp)
+
+[139.单词拆分](./Dynamic-Programming/139.单词拆分.cpp)
+
+[188.买卖股票的最佳时机-iv](./Dynamic-Programming/188.买卖股票的最佳时机-iv.cpp)
 
 [1235.规划兼职工作](./Dynamic-Programming/1235.规划兼职工作.cpp)
 
