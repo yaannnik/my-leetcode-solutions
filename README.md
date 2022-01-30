@@ -8,6 +8,10 @@
 
 [56.合并区间](./Array/56.合并区间.cpp)
 
+[134.加油站](./Array/134.加油站.cpp)
+
+[189.轮转数组](./Array/189.轮转数组.cpp)
+
 [204.计数质数](./Array/204.计数质数.cpp)
 
 [915.分割数组](./Array/915.分割数组.cpp)
@@ -118,7 +122,15 @@
 
 [5.最长回文子串](./Dynamic-Programming/5.最长回文子串.cpp)
 
+[10.正则表达式匹配](./Dynamic-Programming/10.正则表达式匹配.cpp)
+
 [53.最大子数组和](./Dynamic-Programming/53.最大子数组和.cpp)
+
+[72.编辑距离](./Dynamic-Programming/72.编辑距离.cpp)
+
+[97.交错字符串](./Dynamic-Programming/97.交错字符串.cpp)
+
+[115.不同的子序列](./Dynamic-Programming/115.不同的子序列.cpp)
 
 [121.买卖股票的最佳时机](./Dynamic-Programming/121.买卖股票的最佳时机.cpp)
 
@@ -129,6 +141,10 @@
 [139.单词拆分](./Dynamic-Programming/139.单词拆分.cpp)
 
 [188.买卖股票的最佳时机-iv](./Dynamic-Programming/188.买卖股票的最佳时机-iv.cpp)
+
+[256.粉刷房子](./Dynamic-Programming/256.粉刷房子.cpp)
+
+[265.粉刷房子-ii](./Dynamic-Programming/265.粉刷房子-ii.cpp)
 
 [1235.规划兼职工作](./Dynamic-Programming/1235.规划兼职工作.cpp)
 
@@ -141,6 +157,8 @@
 [138.复制带随机指针的链表](./Hash-Map/138.复制带随机指针的链表.cpp)
 
 [560.和为K的子数组](./Hash-Map/560.和为K的子数组.cpp)
+
+[884.两句话中的不常见单词](./Hash-Map/884.两句话中的不常见单词.cpp)
 
 [1010.总持续时间可被-60-整除的歌曲](./Hash-Map/1010.总持续时间可被-60-整除的歌曲.cpp)
 
