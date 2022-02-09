@@ -1,5 +1,4 @@
 #include <vector>
-#include <algorithm>
 using namespace std;
 
 class Solution {
@@ -16,7 +15,7 @@ public:
     void best(vector<int>& nums, int k) {
         int n = nums.size();
         k = k % n;
-        int count = __gcd(k, n);
+        int count = gcd(k, n);
         for (int start = 0; start < count; ++start) {
             int current = start;
             int prev = nums[start];
@@ -26,5 +25,13 @@ public:
                 current = next;
             } while (start != current);
         }
+    }
+
+    int gcd(int x, int y) {
+        while(y > 0) {
+            x = x % y;
+            swap(x, y);
+        }
+        return x;
     }
 };
