@@ -49,14 +49,20 @@ public:
     int numIslands(vector<vector<char>>& grid) {
         UnionFind uf(grid);
         int m = grid.size(), n = grid[0].size();
-        for(int i = 0; i < grid.size(); i++) {
-            for(int j = 0; j < grid[0].size(); j++) {
-                if (grid[i][j] == '1') {
-                    grid[i][j] = '0';
-                    if (i - 1 >= 0 && grid[i-1][j] == '1') uf.merge(i*n+j, (i-1)*n+j);
-                    if (i + 1 < m && grid[i+1][j] == '1') uf.merge(i*n+j, (i+1)*n+j);
-                    if (j - 1 >= 0 && grid[i][j-1] == '1') uf.merge(i*n+j, i*n+(j-1));
-                    if (j + 1 < n && grid[i][j+1] == '1') uf.merge(i*n+j, i*n+(j+1));
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if(grid[i][j] == '1') {
+                    if(i - 1 >= 0 && grid[i-1][j] == '1')
+                        uf.merge(i * n + j, (i - 1) * n + j);
+
+                    if(i + 1 < m && grid[i+1][j] == '1')
+                        uf.merge(i * n + j, (i + 1) * n + j);
+
+                    if(j - 1 >= 0 && grid[i][j-1] == '1')
+                        uf.merge(i * n + j, i * n + (j - 1));
+
+                    if(j + 1 < n && grid[i][j+1] == '1')
+                        uf.merge(i * n + j, i * n + (j + 1));
                 }
             }
         }
