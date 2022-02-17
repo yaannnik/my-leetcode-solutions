@@ -130,6 +130,10 @@
 
 [254.因子的组合](./Depth-First-Search/254.因子的组合.cpp)
 
+[293.翻转游戏](./Depth-First-Search/293.翻转游戏.cpp)
+
+[294.翻转游戏-ii](./Depth-First-Search/294.翻转游戏-ii.cpp)
+
 [301.删除无效的括号](./Depth-First-Search/301.删除无效的括号.cpp)
 
 [339.嵌套列表权重和](./Depth-First-Search/339.嵌套列表权重和.cpp)
@@ -137,6 +141,8 @@
 [386.字典树排序](./Depth-First-Search/386.字典树排序.cpp)
 
 [491.递增子序列](./Depth-First-Search/491.递增子序列.cpp)
+
+[688.骑士在棋盘上的概率](./Depth-First-Search/688.骑士在棋盘上的概率.cpp)
 
 [1020.飞地的数量](./Depth-First-Search/1020.飞地的数量.cpp)
 
@@ -284,8 +290,6 @@
 
 [84.柱状图中最大的矩形](./Monotonic-Stack/84.柱状图中最大的矩形.cpp)
 
-[239.滑动窗口最大值](./Monotonic-Stack/239.滑动窗口最大值.cpp)
-
 [316.去除重复字母](./Monotonic-Stack/316.去除重复字母.cpp)
 
 [402.移掉K位数字](./Monotonic-Stack/402.移掉K位数字.cpp)
@@ -301,6 +305,16 @@
 [901.股票价格跨度](./Monotonic-Stack/901.股票价格跨度.cpp)
 
 [1019.链表中的下一个更大节点](./Monotonic-Stack/1019.链表中的下一个更大节点.cpp)
+
+
+
+### Priority Queue
+
+[239.滑动窗口最大值](./Priority-Queue/239.滑动窗口最大值.cpp)
+
+[1054.距离相等的条形码](./Priority-Queue/1054.距离相等的条形码.cpp)
+
+[1405.最长快乐字符串](./Priority-Queue/1405.最长快乐字符串.cpp)
 
 
 
@@ -399,8 +413,6 @@
 [1055.形成字符串的最短路径](./String/1055.形成字符串的最短路径.cpp)
 
 [1256.加密数字](./String/1256.加密数字.cpp)
-
-[1405.最长快乐字符串](./String/1405.最长快乐字符串.cpp)
 
 [1763.最长的美好子字符串](./String/1763.最长的美好子字符串.cpp)
 
