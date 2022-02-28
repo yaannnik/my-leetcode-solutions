@@ -1,10 +1,6 @@
-/*
- * @lc app=leetcode.cn id=1648 lang=cpp
- *
- * [1648] 销售价值减少的颜色球
- */
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int maxProfit(vector<int>& inventory, int orders) {
@@ -39,5 +35,3 @@ public:
         return (a > b);
     }
 };
-// @lc code=end
-
