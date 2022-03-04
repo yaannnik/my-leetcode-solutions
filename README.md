@@ -6,6 +6,8 @@
 
 [48.旋转图像](./Array/48.旋转图像.cpp)
 
+[54.螺旋矩阵](./Array/54.螺旋矩阵.cpp)
+
 [56.合并区间](./Array/56.合并区间.cpp)
 
 [134.加油站](./Array/134.加油站.cpp)
@@ -108,6 +110,8 @@
 
 [851.喧闹和富有](./Breadth-First-Search/851.喧闹和富有.cpp)
 
+[934.最短的桥](./Breadth-First-Search/934.最短的桥.cpp)
+
 [1136.平行课程](./Breadth-First-Search/1136.平行课程.cpp)
 
 [1273.删除树节点](./Breadth-First-Search/1273.删除树节点.cpp)
@@ -162,6 +166,8 @@
 
 [386.字典树排序](./Depth-First-Search/386.字典树排序.cpp)
 
+[473.火柴拼正方形](./Depth-First-Search/473.火柴拼正方形.cpp)
+
 [491.递增子序列](./Depth-First-Search/491.递增子序列.cpp)
 
 [688.骑士在棋盘上的概率](./Depth-First-Search/688.骑士在棋盘上的概率.cpp)
@@ -196,11 +202,15 @@
 
 [5.最长回文子串](./Dynamic-Programming/5.最长回文子串.cpp)
 
-[10.正则表达式匹配](./Dynamic-Programming/10.正则表达式匹配.cpp)
+[10.正则表达式匹配](Dynamic-Programming/字符串匹配/10.正则表达式匹配.cpp)
 
-[44.通配符匹配](./Dynamic-Programming/44.通配符匹配.cpp)
+[44.通配符匹配](Dynamic-Programming/字符串匹配/44.通配符匹配.cpp)
+
+[45.跳跃游戏-ii](Dynamic-Programming/跳跃游戏/45.跳跃游戏-ii.cpp)
 
 [53.最大子数组和](./Dynamic-Programming/53.最大子数组和.cpp)
+
+[55.跳跃游戏](Dynamic-Programming/跳跃游戏/55.跳跃游戏.cpp)
 
 [72.编辑距离](./Dynamic-Programming/72.编辑距离.cpp)
 
@@ -208,19 +218,19 @@
 
 [115.不同的子序列](./Dynamic-Programming/115.不同的子序列.cpp)
 
-[121.买卖股票的最佳时机](./Dynamic-Programming/121.买卖股票的最佳时机.cpp)
+[121.买卖股票的最佳时机](Dynamic-Programming/买卖股票的最佳时机/121.买卖股票的最佳时机.cpp)
 
-[122.买卖股票的最佳时机-ii](./Dynamic-Programming/122.买卖股票的最佳时机-ii.cpp)
+[122.买卖股票的最佳时机-ii](Dynamic-Programming/买卖股票的最佳时机/122.买卖股票的最佳时机-ii.cpp)
 
-[123.买卖股票的最佳时机-iii](./Dynamic-Programming/123.买卖股票的最佳时机-iii.cpp)
+[123.买卖股票的最佳时机-iii](Dynamic-Programming/买卖股票的最佳时机/123.买卖股票的最佳时机-iii.cpp)
 
 [139.单词拆分](./Dynamic-Programming/139.单词拆分.cpp)
 
-[188.买卖股票的最佳时机-iv](./Dynamic-Programming/188.买卖股票的最佳时机-iv.cpp)
+[188.买卖股票的最佳时机-iv](Dynamic-Programming/买卖股票的最佳时机/188.买卖股票的最佳时机-iv.cpp)
 
-[256.粉刷房子](./Dynamic-Programming/256.粉刷房子.cpp)
+[256.粉刷房子](Dynamic-Programming/粉刷房子/256.粉刷房子.cpp)
 
-[265.粉刷房子-ii](./Dynamic-Programming/265.粉刷房子-ii.cpp)
+[265.粉刷房子-ii](Dynamic-Programming/粉刷房子/265.粉刷房子-ii.cpp)
 
 [416.分割等合子集](./Dynamic-Programming/416.分割等合子集.cpp)
 
@@ -230,7 +240,7 @@
 
 [1334.阈值距离内邻居最少的城市](./Dynamic-Programming/1334.阈值距离内邻居最少的城市.cpp)
 
-[1871.跳跃游戏-vii](./Dynamic-Programming/1871.跳跃游戏-vii.cpp)
+[1871.跳跃游戏-vii](Dynamic-Programming/跳跃游戏/1871.跳跃游戏-vi.cpp)
 
 [1928.规定时间内到达终点的最小花费](./Dynamic-Programming/1928.规定时间内到达终点的最小花费.cpp)
 
@@ -334,6 +344,8 @@
 
 [84.柱状图中最大的矩形](./Monotonic-Stack/84.柱状图中最大的矩形.cpp)
 
+[85.最大矩形](./Monotonic-Stack/85.最大矩形.cpp)
+
 [316.去除重复字母](./Monotonic-Stack/316.去除重复字母.cpp)
 
 [402.移掉K位数字](./Monotonic-Stack/402.移掉K位数字.cpp)
@@ -346,6 +358,8 @@
 
 [739.每日温度](./Monotonic-Stack/739.每日温度.cpp)
 
+[862.和至少为K的最短子数组](./Monotonic-Stack/862.和至少为K的最短子数组.cpp)
+
 [901.股票价格跨度](./Monotonic-Stack/901.股票价格跨度.cpp)
 
 [1019.链表中的下一个更大节点](./Monotonic-Stack/1019.链表中的下一个更大节点.cpp)
@@ -355,6 +369,8 @@
 ### Priority Queue
 
 [239.滑动窗口最大值](./Priority-Queue/239.滑动窗口最大值.cpp)
+
+[373.查找和最小的K对数字](./Priority-Queue/373.查找和最小的K对数字.cpp)
 
 [1054.距离相等的条形码](./Priority-Queue/1054.距离相等的条形码.cpp)
 
@@ -512,6 +528,12 @@
 
 [701.二叉搜索树中的插入操作](./Tree/701.二叉搜索树中的插入操作.cpp)
 
+[814.二叉树剪枝](./Tree/814.二叉树剪枝.cpp)
+
+[865.具有所有最深节点的最小子树](./Tree/865.具有所有最深节点的最小子树.cpp)
+
+[1123.最深叶节点的最近公共祖先](./Tree/1123.最深叶节点的最近公共祖先.cpp)
+
 [1305.两棵二叉搜索树中的所有元素](./Tree/1305.两棵二叉搜索树中的所有元素.cpp)
 
 [1719.重构一棵树的方案数](./Tree/1719.重构一棵树的方案数.cpp)
@@ -521,6 +543,8 @@
 ## Union Find
 
 [200.岛屿数量](./Union-Find/200.岛屿数量.cpp)
+
+[261.以图判树](./Union-Find/261.以图判树.cpp)
 
 [305.岛屿数量-ii](./Union-Find/305.岛屿数量-ii.cpp)
 
