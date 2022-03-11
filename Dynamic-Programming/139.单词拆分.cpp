@@ -1,24 +1,29 @@
 #include <vector>
 #include <string>
-#include <unordered_set>
+#include <set>
 using namespace std;
 
 class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
-        int n = s.size();
-        vector<bool> dp(n, false);
-        vector<int> lefts = {0};
-        unordered_set<string> dict(wordDict.begin(), wordDict.end());
-        for(int i = 0; i < n; i++) {
-            for(int& left : lefts) {
-                if(dict.count(s.substr(left, i - left + 1))) {
+        auto wordDictSet = set <string> ();
+        for (auto word: wordDict) {
+            wordDictSet.insert(word);
+        }
+
+        auto dp = vector <bool> (s.size() + 1);
+        auto stop = vector <bool> (s.size() + 1);
+        dp[0] = true;
+        for (int i = 1; i <= s.size(); ++i) {
+            for (int j = 0; j < i; ++j) {
+                if (dp[j] && wordDictSet.find(s.substr(j, i - j)) != wordDictSet.end()) {
                     dp[i] = true;
-                    lefts.emplace_back(i+1);
+                    stop[i] = j;
                     break;
                 }
             }
         }
-        return dp.back();
+
+        return dp[s.size()];
     }
 };

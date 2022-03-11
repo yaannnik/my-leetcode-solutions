@@ -1,4 +1,4 @@
-#include "TreeNode.h"
+#include "../TreeNode.h"
 #include <stack>
 #include <vector>
 using namespace std;

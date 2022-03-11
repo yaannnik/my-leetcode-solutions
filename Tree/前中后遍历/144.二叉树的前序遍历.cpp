@@ -1,6 +1,6 @@
 #include <vector>
 #include <stack>
-#include "TreeNode.h"
+#include "../TreeNode.h"
 using namespace std;
 
 class Solution {
