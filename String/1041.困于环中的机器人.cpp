@@ -1,10 +1,8 @@
-/*
- * @lc app=leetcode.cn id=1041 lang=cpp
- *
- * [1041] 困于环中的机器人
- */
+#include <string>
+#include <vector>
+#include <utility>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     bool isRobotBounded(string instructions) {
@@ -52,5 +50,3 @@ public:
         return d != 0;
     }
 };
-// @lc code=end
-

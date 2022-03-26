@@ -1,10 +1,6 @@
-/*
- * @lc app=leetcode.cn id=1603 lang=cpp
- *
- * [1603] 设计停车系统
- */
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class ParkingSystem {
 public:
     ParkingSystem(int big, int medium, int small) {
@@ -33,5 +29,3 @@ public:
  * ParkingSystem* obj = new ParkingSystem(big, medium, small);
  * bool param_1 = obj->addCar(carType);
  */
-// @lc code=end
-

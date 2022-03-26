@@ -1,10 +1,6 @@
-/*
- * @lc app=leetcode.cn id=1537 lang=cpp
- *
- * [1537] 最大得分
- */
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int maxSum(vector<int>& nums1, vector<int>& nums2) {
@@ -39,5 +35,3 @@ public:
         return res;
     }
 };
-// @lc code=end
-
