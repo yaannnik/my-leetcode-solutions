@@ -112,7 +112,11 @@
 
 [302.包含全部黑色像素的最小矩形](./Breadth-First-Search/302.包含全部黑色像素的最小矩形.cpp)
 
+[310.最小高度树](./Breadth-First-Search/310.最小高度树.cpp)
+
 [444.重建序列](./Breadth-First-Search/444.重建序列.cpp)
+
+[542.01矩阵](./Breadth-First-Search/542.01矩阵.cpp)
 
 [773.滑动谜题](./Breadth-First-Search/773.滑动谜题.cpp)
 
@@ -125,6 +129,8 @@
 [934.最短的桥](./Breadth-First-Search/934.最短的桥.cpp)
 
 [1136.平行课程](./Breadth-First-Search/1136.平行课程.cpp)
+
+[1197.进击的骑士](./Breadth-First-Search/1197.进击的骑士.cpp)
 
 [1273.删除树节点](./Breadth-First-Search/1273.删除树节点.cpp)
 
@@ -357,6 +363,8 @@
 [693.交替位二进制数](./Math/693.交替位二进制数.cpp)
 
 [728.自除数](./Math/728.自除数.cpp)
+
+[762.二进制表示中质数个计算置位](./Math/762.二进制表示中质数个计算置位.cpp)
 
 [891.子序列宽度之和](./Math/891.子序列宽度之和.cpp)
 
