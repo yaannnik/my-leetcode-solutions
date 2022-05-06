@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=37 lang=cpp
- *
- * [37] 解数独
- */
+#include <vector>
+#include <utility>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     vector<vector<bool>> rows = vector<vector<bool>>(9, vector<bool>(9, false));
@@ -55,5 +52,3 @@ public:
         }
     }
 };
-// @lc code=end
-

@@ -1,10 +1,6 @@
-/*
- * @lc app=leetcode.cn id=275 lang=cpp
- *
- * [275] H 指数 II
- */
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int hIndex(vector<int>& citations) {
@@ -24,5 +20,3 @@ public:
         return citations.size()-l;
     }
 };
-// @lc code=end
-

@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=1268 lang=cpp
- *
- * [1268] 搜索推荐系统
- */
+#include <vector>
+#include <string>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     vector<vector<string>> suggestedProducts(vector<string>& products, string searchWord) {
@@ -32,5 +29,3 @@ public:
         return res;
     }
 };
-// @lc code=end
-

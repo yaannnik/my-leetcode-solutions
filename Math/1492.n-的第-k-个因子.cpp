@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=1492 lang=cpp
- *
- * [1492] n 的第 k 个因子
- */
+#include <vector>
+#include <numeric>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int kthFactor(int n, int k) {
@@ -30,5 +27,3 @@ public:
         return -1;
     }
 };
-// @lc code=end
-

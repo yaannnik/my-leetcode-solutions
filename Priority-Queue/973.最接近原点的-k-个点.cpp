@@ -1,10 +1,6 @@
-/*
- * @lc app=leetcode.cn id=973 lang=cpp
- *
- * [973] 最接近原点的 K 个点
- */
+#include <queue>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
@@ -25,5 +21,3 @@ public:
         return res;
     }
 };
-// @lc code=end
-
