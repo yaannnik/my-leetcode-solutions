@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=179 lang=cpp
- *
- * [179] 最大数
- */
+#include <vector>
+#include <string>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     string largestNumber(vector<int>& nums) {
@@ -28,5 +25,3 @@ public:
         return (sy * x + y) > (sx * y + x);
     }
 };
-// @lc code=end
-

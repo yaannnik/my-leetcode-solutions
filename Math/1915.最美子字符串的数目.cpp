@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=1915 lang=cpp
- *
- * [1915] 最美子字符串的数目
- */
+#include <string>
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     long long wonderfulSubstrings(string word) {
@@ -23,5 +20,3 @@ public:
         return res;
     }
 };
-// @lc code=end
-

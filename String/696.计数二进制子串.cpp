@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=696 lang=cpp
- *
- * [696] 计数二进制子串
- */
+#include <string>
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int countBinarySubstrings(string s) {
@@ -34,5 +31,3 @@ public:
         return res;
     }
 };
-// @lc code=end
-

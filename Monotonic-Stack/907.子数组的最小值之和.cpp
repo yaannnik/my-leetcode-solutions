@@ -1,13 +1,7 @@
-/*
- * @@author: yangyi
- */
-/*
- * @lc app=leetcode.cn id=907 lang=cpp
- *
- * [907] 子数组的最小值之和
- */
+#include <vector>
+#include <stack>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int sumSubarrayMins(vector<int>& arr) {
@@ -20,9 +14,7 @@ public:
                 int top = st.top();
                 st.pop();
                 long left = st.empty() ? top+1 : top-st.top();
-                cout << "left: " << left << endl;
                 long right = i - top;
-                cout << "right: " << right << endl;
                 res += (long)(left * right * arr[top])%mod;
                 res = res % mod;
             }

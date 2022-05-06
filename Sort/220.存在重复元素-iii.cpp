@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=220 lang=cpp
- *
- * [220] 存在重复元素 III
- */
+#include <set>
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
@@ -25,5 +22,3 @@ public:
         return false;
     }
 };
-// @lc code=end
-

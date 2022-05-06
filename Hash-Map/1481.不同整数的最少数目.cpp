@@ -1,10 +1,7 @@
-/*
- * @lc app=leetcode.cn id=1481 lang=cpp
- *
- * [1481] 不同整数的最少数目
- */
+#include <vector>
+#include <unordered_map>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
@@ -36,5 +33,3 @@ public:
         return 0;
     }
 };
-// @lc code=end
-

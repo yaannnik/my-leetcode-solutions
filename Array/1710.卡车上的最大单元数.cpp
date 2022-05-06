@@ -1,10 +1,6 @@
-/*
- * @lc app=leetcode.cn id=1710 lang=cpp
- *
- * [1710] 卡车上的最大单元数
- */
+#include <vector>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int maximumUnits(vector<vector<int>>& boxTypes, int truckSize) {
@@ -31,5 +27,3 @@ public:
         return (v1[1] > v2[1]);
     }
 };
-// @lc code=end
-

@@ -1,10 +1,6 @@
-/*
- * @lc app=leetcode.cn id=926 lang=cpp
- *
- * [926] 将字符串翻转到单调递增
- */
+#include <string>
+using namespace std;
 
-// @lc code=start
 class Solution {
 public:
     int minFlipsMonoIncr(string s) {
@@ -26,5 +22,3 @@ public:
         return res + cnt0;
     }
 };
-// @lc code=end
-
