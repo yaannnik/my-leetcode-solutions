@@ -4,64 +4,45 @@ using namespace std;
 class Solution {
 public:
     ListNode* sortList(ListNode* head) {
-        if(!head) return nullptr;
-        int len = 0;
-        ListNode* p = head;
-        while(p) {
-            len++;
-            p = p->next;
+        ListNode* res = mergeSort(head);
+        return res;
+    }
+
+    ListNode* mergeSort(ListNode* head) {
+        if(!head || !head->next) {
+            return head;
+        }
+        ListNode *slow = new ListNode(-1, head), *fast = new ListNode(-1, head);
+        while(fast && fast->next) {
+            slow = slow->next;
+            fast = fast->next->next;
         }
 
-        ListNode* dummy = new ListNode(-1, head);
+        ListNode *p1 = head, *p2 = slow->next;
+        slow->next = nullptr;
 
-        for(int sublen = 1; sublen < len; sublen *= 2) {
-            ListNode* prev = dummy, * cur = dummy->next;
-            while(cur) {
-                ListNode* head1 = cur;
-                for(int i = 1; i < sublen && cur->next; i++) {
-                    cur = cur->next;
-                }
-                ListNode* head2 = cur->next;
-                cur->next = nullptr;
+        ListNode *p1_ = mergeSort(p1), *p2_ = mergeSort(p2);
 
-                cur = head2;
-                for(int i = 1; i < sublen && cur; i++) {
-                    cur = cur->next;
-                }
-
-                ListNode* next = nullptr;
-                if(cur) {
-                    next =  cur->next;
-                    cur->next = nullptr;
-                }
-
-                ListNode* merged = merge(head1, head2);
-                prev->next = merged;
-                while(prev->next) {
-                    prev = prev->next;
-                }
-
-                cur = next;
-            }
-        }
-        return dummy->next;
+        ListNode* res = merge(p1_, p2_);
+        return res;
     }
 
     ListNode* merge(ListNode* a, ListNode* b) {
-        ListNode* dummy = new ListNode(-1);
-        ListNode* p = dummy;
-        ListNode* pa = a, * pb = b;
-        while(pa && pb) {
-            if(pa->val <= pb->val) {
-                p->next = pa;
-                pa = pa->next;
+        ListNode *p1 = a, *p2 = b;
+        ListNode* res = new ListNode(-1, nullptr);
+        ListNode* ptr = res;
+        while(p1 && p2) {
+            if(p1->val <= p2->val) {
+                ptr->next = p1;
+                p1 = p1->next;
             } else {
-                p->next = pb;
-                pb = pb->next;
+                ptr->next = p2;
+                p2 = p2->next;
             }
-            p = p->next;
+            ptr = ptr->next;
         }
-        p->next = (pa == nullptr) ? pb : pa;
-        return dummy->next;
+        ptr->next = p1 ? p1 : p2;
+
+        return res->next;
     }
 };

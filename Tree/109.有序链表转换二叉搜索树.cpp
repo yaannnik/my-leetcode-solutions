@@ -26,6 +26,7 @@ public:
             int mid = left + (right - left)/2;
             ListNode* p = head;
             for(int i = 0; i < mid; i++) {
+                // dummy开始<=, head开始<
                 p = p->next;
             }
             TreeNode* root = new TreeNode(p->val);

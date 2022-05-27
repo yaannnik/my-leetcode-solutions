@@ -30,5 +30,28 @@ public:
        return res; 
     }
 };
-// @lc code=end
 
+class Traverse1 {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> res;
+        if(!root) {
+            return res;
+        }
+        stack<TreeNode*> st;
+        st.push(root);
+        while(!st.empty()) {
+            root = st.top();
+            st.pop();
+            res.emplace_back(root->val);
+            if(root->left) {
+                st.push(root->left);
+            }
+            if(root->right) {
+                st.push(root->right);
+            }
+        }
+        reverse(res.begin(), res.end());
+        return res;
+    }
+};

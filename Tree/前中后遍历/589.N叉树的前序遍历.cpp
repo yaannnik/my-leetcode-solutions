@@ -1,6 +1,6 @@
 #include <vector>
 #include <stack>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 // Definition for a Node.
@@ -39,34 +39,33 @@ public:
 
 class Traverse1 {
 public:
+    unordered_map<Node*, int> mp;
     vector<int> preorder(Node* root) {
-        if(!root) {
-            return {};
-        }
         vector<int> res;
+        if(!root) {
+            return res;
+        }
         stack<Node*> st;
-        map<Node*, int> mp;
-        while(!st.empty() || root) {
+        while(root || !st.empty()) {
             while(root) {
-                st.emplace(root);
+                if(!mp.count(root)) {
+                    mp[root] = 0;
+                }
                 res.emplace_back(root->val);
-                mp[root] = 0;
+                st.push(root);
                 if(!root->children.empty()) {
-
-                    root = root->children[0];
+                    root = root->children[mp[root]];
                 } else {
                     root = nullptr;
                 }
             }
             root = st.top();
-            int idx = mp.count(root) ? mp[root] + 1 : 0;
-            if(idx < root->children.size()) {
-                mp[root] = idx;
-                root = root->children[idx];
-            } else {
+            mp[root]++;
+            if(mp[root] >= root->children.size()) {
                 st.pop();
-                mp.erase(root);
                 root = nullptr;
+            } else {
+                root = root->children[mp[root]];
             }
         }
         return res;

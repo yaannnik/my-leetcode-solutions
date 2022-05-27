@@ -4,17 +4,33 @@ using namespace std;
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
-        ListNode* dummy = new ListNode(-1, head);
-        ListNode* tmp = dummy;
-        while(tmp->next && tmp->next->next) {
-            ListNode* node1 = tmp->next;
-            ListNode* node2 = tmp->next->next;
-            tmp->next = node2;
-            node1->next = node2->next;
-            node2->next = node1;
-            tmp = node1;
+        if(!head || !head->next) {
+            return head;
         }
-        // head is now the second node in the linked list
+        ListNode* dummy = new ListNode(-1, head);
+        ListNode *start = dummy, *end = start;
+        for(int i = 0; i < 3; i++) {
+            end = end->next;
+        }
+        while(start) {
+            auto [n1, n2] = reverse(start->next, start->next->next);
+            start->next = n1;
+            n2->next = end;
+            start = n2;
+            end = start;
+            for(int i = 0; i < 3; i++) {
+                if(!end) {
+                    return dummy->next;
+                }
+                end = end->next;
+            }
+        }
         return dummy->next;
+    }
+
+    pair<ListNode*, ListNode*> reverse(ListNode* first, ListNode* second) {
+        first->next = nullptr;
+        second->next = first;
+        return {second, first};
     }
 };

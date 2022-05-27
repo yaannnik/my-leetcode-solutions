@@ -5,35 +5,44 @@ using namespace std;
 class Solution {
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
-        ListNode* pe = head;
-        ListNode *dummy = new ListNode(-1), *pd = dummy;
-        dummy->next = head;
-        while(pe) {
-            ListNode* ps = pe;
-            int i = 0;
-            for(; i < k && pe; i++) {
-                pe = pe->next;
-            }
-            if(!pe && i < k) {
-                pd->next = ps;
-                break;
-            }
-            auto p = reverseGroup(ps, pe);
-            pd->next = p.first;
-            pd = p.second;
+        if(!head) {
+            return nullptr;
         }
+        ListNode* dummy = new ListNode(-1, head);
+        ListNode *start = dummy, *end = start;
+        for(int i = 0; i < k + 1; i++) {
+            if(!end) {
+                return dummy->next;
+            }
+            end = end->next;
+        }
+
+        while(start) {
+            auto [p1, p2] = reverse(start->next, end);
+            // cout << p1->val << " " << p2->val << endl;
+            start->next = p1;
+            p2->next = end;
+            start = p2;
+            end = start;
+            for(int i = 0; i < k + 1; i++) {
+                if(!end) {
+                    return dummy->next;
+                }
+                end = end->next;
+            }
+        }
+
         return dummy->next;
     }
 
-    pair<ListNode*, ListNode*> reverseGroup(ListNode* start, ListNode* end) {
-        ListNode* H = new ListNode(-1);
-        H->next = nullptr;
+    pair<ListNode*, ListNode*> reverse(ListNode* start, ListNode* end) {
+        ListNode* H = new ListNode(-1, nullptr);
         ListNode* ptr = start;
         while(ptr != end) {
-            ListNode* nex = ptr->next;
+            ListNode* tmp = ptr->next;
             ptr->next = H->next;
             H->next = ptr;
-            ptr = nex;
+            ptr = tmp;
         }
         return {H->next, start};
     }
