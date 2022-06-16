@@ -2,58 +2,73 @@
 #include <string>
 using namespace std;
 
-struct TrieNode {
-    vector<TrieNode*> children;
-    string word;
-    TrieNode() {
+class Trie {
+public:
+    Trie() {
+        children = vector<Trie*>(26);
         word = "";
-        children = vector<TrieNode*>(26, nullptr);
     }
+
+    void insert(string word) {
+        Trie* r = this;
+        for(char& ch : word) {
+            int k = ch - 'a';
+            if(r->children[k] == nullptr) {
+                r->children[k] = new Trie();
+                // cout << ch << endl;
+            }
+            r = r->children[k];
+        }
+        r->word = word;
+        // cout << r->word << endl;
+    }
+
+    vector<Trie*> children;
+    string word;
 };
 
 class Solution {
 public:
+    set<string> res;
+    vector<vector<int>> d = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
-        res = {};
-        TrieNode* root = new TrieNode();
-        for(int i = 0; i < words.size(); i++) {
-            TrieNode* ptr = root;
-            for(int j = 0; j < words[i].size(); j++) {
-                if(ptr->children[words[i][j]-'a'] == nullptr) {
-                    ptr->children[words[i][j]-'a'] = new TrieNode();
+        Trie* root = new Trie();
+        for(string& word : words) {
+            // cout << word << endl;
+            root->insert(word);
+        }
+        int m = board.size(), n = board[0].size();
+        vector<vector<bool>> visited = vector<vector<bool>>(m, vector<bool>(n, false));
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                int k = board[i][j] - 'a';
+                if(root->children[k] != nullptr) {
+                    // cout << board[i][j] << endl;
+                    dfs(i, j, board, visited, root->children[k]);
                 }
-                ptr = ptr->children[words[i][j]-'a'];
-            }
-            ptr->word = words[i];
-        }
-        for(int i = 0; i < board.size(); i++) {
-            for(int j = 0; j < board[0].size(); j++) {
-                dfs(board, root, i, j);
+
             }
         }
-        return res;
+        return vector<string>(res.begin(), res.end());
     }
 
-    void dfs(vector<vector<char>>& board, TrieNode* node, int i, int j) {
-        if(i < 0 || j < 0 || i >= board.size() || j >= board[0].size()) {
-            return;
+    void dfs(int x, int y, vector<vector<char>>& board, vector<vector<bool>>& visited, Trie* root) {
+        visited[x][y] = true;
+        if(root->word != "") {
+            res.insert(root->word);
+            root->word = "";
         }
-        if(board[i][j] == '*' || node->children[board[i][j] - 'a'] == nullptr ) {
-            return;
+        int m = board.size(), n = board[0].size();
+        for(int i = 0; i < 4; i++) {
+            int nx = x + d[i][0], ny = y + d[i][1];
+            if(nx >= 0 && nx < m && ny >= 0 && ny < n && !visited[nx][ny]) {
+                int kk = board[nx][ny] - 'a';
+                if(root->children[kk] != nullptr) {
+                    // cout << board[nx][ny] << endl;
+                    dfs(nx, ny, board, visited, root->children[kk]);
+                }
+            }
         }
-        char tmp = board[i][j];
-        node = node->children[tmp - 'a'];
-        if(node->word != "") {
-            res.emplace_back(node->word);
-            node->word = ""; // avoid duplicate
-        }
-        board[i][j] = '*';
-        dfs(board, node, i - 1, j);
-        dfs(board, node, i + 1, j);
-        dfs(board, node, i, j - 1);
-        dfs(board, node, i, j + 1);
-        board[i][j] = tmp;
+        visited[x][y] = false;
     }
-
-    vector<string> res;
 };
