@@ -1,6 +1,6 @@
 # my-leetcode-solutions
 
-
+[![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)
 
 ## Array
 
@@ -220,6 +220,8 @@
 
 [339.嵌套列表权重和](./Depth-First-Search/339.嵌套列表权重和.cpp)
 
+[341.扁平化嵌套列表迭代器](./Depth-First-Search/341.扁平化嵌套列表迭代器.cpp)
+
 [386.字典树排序](./Depth-First-Search/386.字典树排序.cpp)
 
 [417.太平洋大西洋水流问题](./Depth-First-Search/417.太平洋大西洋水流问题.cpp)
@@ -438,6 +440,8 @@
 
 [1721.交换链表中的节点](./Linked-List/1721.交换链表中的节点.cpp)
 
+[剑指Offer-ii-029.排序的循环链表](./Linked-List/剑指Offer-ii-029.排序的循环链表.cpp)
+
 
 
 ## Math
@@ -540,6 +544,8 @@
 
 [11.盛水最多的容器](./Sliding-Window/11.盛水最多的容器.cpp)
 
+[30.串联所有单词的子串](./Sliding-Window/30.串联所有单词的子串.cpp)
+
 [76.最小覆盖子串](./Sliding-Window/76.最小覆盖子串.cpp)
 
 [209.长度最小的子数组](./Sliding-Window/209.长度最小的子数组.cpp)
@@ -616,17 +622,25 @@
 
 [155.最小栈](./Stack/155.最小栈.cpp)
 
+[224.基本计算器](./Stack/224.基本计算器.cpp)
+
 [225.用队列实现栈](./Stack/225.用队列实现栈.cpp)
 
 [227.基本计算器-ii](./Stack/227.基本计算器-ii.cpp)
 
 [232.用栈实现队列](./Stack/232.用栈实现队列.cpp)
 
+[385.迷你语法分析器](./Stack/385.迷你语法分析器.cpp)
+
 [456.132模式](./Stack/456.132模式.cpp)
 
 [591.标签验证器](./Stack/591.标签验证器.cpp)
 
+[636.函数的独占时间](./Stack/636.函数的独占时间.cpp)
+
 [682.棒球比赛](./Stack/682.棒球比赛.cpp)
+
+[726.原子的数量](./Stack/726.原子的数量.cpp)
 
 [844.比较含退格的字符串](./Stack/844.比较含退格的字符串.cpp)
 
@@ -705,6 +719,8 @@
 [1041.困于环中的机器人](./String/1041.困于环中的机器人.cpp)
 
 [1055.形成字符串的最短路径](./String/1055.形成字符串的最短路径.cpp)
+
+[1108.IP地址无效化](./String/1108.IP地址无效化.cpp)
 
 [1256.加密数字](./String/1256.加密数字.cpp)
 
@@ -798,7 +814,11 @@
 
 [450.删除二叉搜索树中的节点](./Tree/450.删除二叉搜索树中的节点.cpp)
 
+[508.出现次数最多的子树元素和](./Tree/508.出现次数最多的子树元素和.cpp)
+
 [513.找树左下角的值](./Tree/513.找树左下角的值.cpp)
+
+[515.在每个树行中找最大值](./Tree/515.在每个树行中找最大值.cpp)
 
 [543.二叉树的直径](./Tree/543.二叉树的直径.cpp)
 
