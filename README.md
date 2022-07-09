@@ -84,6 +84,10 @@
 
 [34.在排序数组中查找元素的第一个和最后一个位置](./Binary-Search/34.在排序数组中查找元素的第一个和最后一个位置.cpp)
 
+[35.搜索插入位置](./Binary-Search/35.搜索插入位置.cpp)
+
+[69.x的平方根](./Binary-Search/69.x的平方根.cpp)
+
 [74.搜索二维矩阵](./Binary-Search/74.搜索二维矩阵.cpp)
 
 [81.搜索旋转排序数组-ii](./Binary-Search/81.搜索旋转排序数组-ii.cpp)
@@ -535,6 +539,8 @@
 [692.前K个高频单词](./Priority-Queue/692.前K个高频单词.cpp)
 
 [703.数据流中的第K大元素](./Priority-Queue/703.数据流中的第K大元素.cpp)
+
+[871.最低加油次数](./Priority-Queue/871.最低加油次数.cpp)
 
 [973.最接近原点的K个点](./Priority-Queue/973.最接近原点的K个点.cpp)
 
