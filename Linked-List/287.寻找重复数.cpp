@@ -1,7 +1,7 @@
 #include <vector>
 using namespace std;
 
-class Solution {
+class Solution1 {
 public:
     int findDuplicate(vector<int>& nums) {
         int slow = 0, fast = 0;
@@ -17,5 +17,26 @@ public:
             p2 = nums[p2];
         }
         return p1;
+    }
+};
+
+class Solution2 {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int left = 1, right = nums.size() - 1;
+        while(left <= right) {
+            int mid = left + (right - left) / 2;
+            int cnt = 0;
+            for(int i = 0; i < nums.size(); i++) {
+                cnt += (nums[i] <= mid);
+            }
+            if(cnt <= mid) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        // 找到第一个不满足cnt <= i的数
+        return left;
     }
 };
