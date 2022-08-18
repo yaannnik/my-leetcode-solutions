@@ -22,7 +22,7 @@ public:
                     left = st.top();
                 }
                 int right = i;
-                int w = right - left - 1;
+                int w = right - left - 1; // heights[left+1:right-1]的面积
                 res = max(res, w * h);
             }
             st.push(i);
