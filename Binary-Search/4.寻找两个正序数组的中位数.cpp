@@ -13,25 +13,27 @@ public:
         int m = nums1.size(), n = nums2.size();
         int idx1 = 0, idx2 = 0;
 
-        while(true) {
+        while(1) {
             if(idx1 == m) {
-                // kth is (k-1) from idx
                 return nums2[idx2 + k - 1];
             }
             if(idx2 == n) {
                 return nums1[idx1 + k - 1];
             }
+
             if(k == 1) {
                 return min(nums1[idx1], nums2[idx2]);
             }
-            int new_idx1 = min(idx1 + k/2 - 1, m - 1);
-            int new_idx2 = min(idx2 + k/2 - 1, n - 1);
-            if(nums1[new_idx1] <= nums2[new_idx2]) {
-                k -= new_idx1 - idx1 + 1;
-                idx1 = new_idx1 + 1;
+
+            int idx1_end = min(idx1 + (k / 2) - 1, m - 1);
+            int idx2_end = min(idx2 + (k / 2) - 1, n - 1);
+
+            if(nums1[idx1_end] <= nums2[idx2_end]) {
+                k -= (idx1_end - idx1 + 1);
+                idx1 = idx1_end + 1;
             } else {
-                k -= new_idx2 - idx2 + 1;
-                idx2 = new_idx2 + 1;
+                k -= (idx2_end - idx2 + 1);
+                idx2 = idx2_end + 1;
             }
         }
     }

@@ -1,4 +1,5 @@
 #include <unordered_map>
+#include <list>
 using namespace std;
 
 struct Node {
@@ -72,6 +73,50 @@ public:
     unordered_map<int, Node*> cache;
     Node *head, *tail;
     int size, cap;
+};
+
+class LRUCache_STL {
+public:
+    LRUCache_STL(int capacity) {
+        cap = capacity;
+    }
+
+    int get(int key) {
+        if(!mp.count(key)) {
+            return -1;
+        }
+
+        auto node = mp[key];
+        int val = node->second;
+
+        l.erase(node);
+        l.push_front({key, val});
+
+        mp[key] = l.begin();
+
+        return val;
+    }
+
+    void put(int key, int value) {
+        if(mp.count(key)) {
+            auto node = mp[key];
+            l.erase(node);
+            mp.erase(key);
+        }
+
+        if(l.size() == cap) {
+            auto back = l.back(); // pair
+            l.pop_back();
+            mp.erase(back.first);
+        }
+
+        l.push_front({key, value});
+        mp[key] = l.begin();
+    }
+
+    int cap;
+    list<pair<int, int>> l;
+    unordered_map<int, list<pair<int, int>>::iterator> mp;
 };
 
 /**

@@ -8,15 +8,14 @@ public:
         // 从上往下，把每个节点的右子树移到左子树最右下角节点右，然后将左子树移到右子树
         while(cur) {
             if(cur->left) {
-                TreeNode* left = cur->left; // root of left subtree
-                TreeNode* tmp = left;
-                // for the deepest right leat
+                TreeNode* tmp = cur->left;
                 while(tmp->right) {
                     tmp = tmp->right;
                 }
                 tmp->right = cur->right;
+
+                cur->right = cur->left;
                 cur->left = nullptr;
-                cur->right = left;
             }
             cur = cur->right;
         }

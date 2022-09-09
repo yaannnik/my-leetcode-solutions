@@ -25,3 +25,21 @@ public:
         return res;
     }
 };
+
+class Solution1 {
+public:
+    int scoreOfParentheses(string s) {
+        stack<int> score;
+        score.push(0);
+        for(char& ch : s) {
+            if(ch == '(') {
+                score.push(0);
+            } else {
+                int top = score.top();
+                score.pop();
+                score.top() += max(top * 2, 1);
+            }
+        }
+        return score.top();
+    }
+};

@@ -55,3 +55,23 @@ public:
         return res;
     }
 };
+
+class Recursion {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        if(!root) {
+            return {};
+        }
+
+        if(root->left) {
+            postorderTraversal(root->left);
+        }
+        if(root->right) {
+            postorderTraversal(root->right);
+        }
+        res.emplace_back(root->val);
+        return res;
+    }
+
+    vector<int> res;
+};

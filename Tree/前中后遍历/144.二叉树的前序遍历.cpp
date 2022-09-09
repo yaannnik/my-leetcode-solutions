@@ -3,7 +3,7 @@
 #include "../TreeNode.h"
 using namespace std;
 
-class Solution {
+class Traverse {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
         if(!root) {
@@ -23,4 +23,23 @@ public:
         }
         return res;
     }
+};
+
+class Recursion {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        if(!root) {
+            return {};
+        }
+        res.emplace_back(root->val);
+        if(root->left) {
+            preorderTraversal(root->left);
+        }
+        if(root->right) {
+            preorderTraversal(root->right);
+        }
+        return res;
+    }
+
+    vector<int> res;
 };

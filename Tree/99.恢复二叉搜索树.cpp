@@ -17,6 +17,7 @@ public:
             // pop out the inorder node
             root = st.top();
             st.pop();
+
             if(pred && pred->val > root->val) {
                 // the last wrong place
                 y = root;

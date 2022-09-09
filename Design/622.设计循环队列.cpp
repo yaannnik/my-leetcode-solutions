@@ -1,3 +1,6 @@
+#include <vector>
+using namespace std;
+
 class MyCircularQueue {
 public:
     MyCircularQueue(int k) {
