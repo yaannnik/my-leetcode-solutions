@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 
-class Solution {
+class Solution1 {
 public:
     string decodeString(string s) {
         int n = s.size();
@@ -71,5 +71,36 @@ public:
             st.pop();
         }
         return res;
+    }
+};
+
+class Solution2 {
+public:
+    string helper(string s, int& index) {
+        string res;
+        int num = 0;
+        string temp;
+        while (index < s.size()) {
+            if (s[index] >= '0' && s[index] <= '9') {
+                num = 10 * num + s[index] - '0';
+            } else if (s[index] == '[') {
+                temp = helper(s, ++index);//碰到'[',开始递归
+                while(num-- > 0) {
+                    res += temp;
+                }
+                num = 0; //num置零
+            } else if (s[index] == ']') {
+                break; //碰到']',结束递归
+            } else {
+                res += s[index];
+            }
+            index++;
+        }
+        return res;
+    }
+
+    string decodeString(string s) {
+        int index = 0;
+        return helper(s, index);
     }
 };

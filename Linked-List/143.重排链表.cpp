@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 
-class Solution {
+class Solution1 {
 public:
     void reorderList(ListNode* head) {
         stack<ListNode*> st;
@@ -25,5 +25,30 @@ public:
             ptr = tmp;
         }
         ptr->next = nullptr;
+    }
+};
+
+class Solution2 {
+public:
+    void reorderList(ListNode* head) {
+        vector<ListNode*> vec;
+        ListNode* ptr = head;
+        while(ptr) {
+            vec.push_back(ptr);
+            ptr = ptr->next;
+        }
+        int n = vec.size();
+        int left = 0, right = n - 1;
+        while(left < right) {
+            if(left < right) {
+                vec[left]->next = vec[right];
+                left++;
+            }
+            if(left < right) {
+                vec[right]->next = vec[left];
+                right--;
+            }
+        }
+        vec[left]->next = nullptr;
     }
 };

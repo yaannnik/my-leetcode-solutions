@@ -1,7 +1,7 @@
 #include <vector>
 using namespace std;
 
-class Solution {
+class Solution1 {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
         if(matrix.empty() || matrix[0].empty()) return {};
@@ -44,5 +44,50 @@ public:
                 res.push_back(matrix[i][start]);
             }
         }
+    }
+};
+
+class Solution2 {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int rows = matrix.size(), cols = matrix[0].size();
+        vector<int> res;
+        const int right = 0, down = 1, left = 2, up = 3, visited = -101;
+        int x = 0, y = 0;
+        int dir = 0;
+        for(int i = 0; i < rows * cols; i++) {
+            res.emplace_back(matrix[x][y]);
+            matrix[x][y] = visited;
+            if(dir == right) {
+                if(y + 1 == cols || matrix[x][y+1] == visited) {
+                    dir = down;
+                    x++;
+                } else {
+                    y++;
+                }
+            } else if(dir == down) {
+                if(x + 1 == rows || matrix[x+1][y] == visited) {
+                    dir = left;
+                    y--;
+                } else {
+                    x++;
+                }
+            } else if(dir == left) {
+                if(y - 1 < 0 || matrix[x][y-1] == visited) {
+                    dir = up;
+                    x--;
+                } else {
+                    y--;
+                }
+            } else {
+                if(x - 1 < 0 || matrix[x-1][y] == visited) {
+                    dir = right;
+                    y++;
+                } else {
+                    x--;
+                }
+            }
+        }
+        return res;
     }
 };

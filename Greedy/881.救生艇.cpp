@@ -9,6 +9,10 @@ public:
         int left = 0, right = n - 1;
         int res = 0;
         while(left <= right) {
+            if(right == left) {
+                res++;
+                break;
+            }
             if(people[left] + people[right] <= limit) {
                 // 一大带一小
                 res++;

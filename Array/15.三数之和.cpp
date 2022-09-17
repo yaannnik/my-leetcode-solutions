@@ -35,8 +35,14 @@ public:
                 left++;
                 right--;
             } else if(num + nums[left] + nums[right] < 0) {
+                while(left < right && nums[left] == nums[left + 1]) {
+                    left++;
+                }
                 left++;
             } else {
+                while(left < right && nums[right] == nums[right - 1]) {
+                    right--;
+                }
                 right--;
             }
 

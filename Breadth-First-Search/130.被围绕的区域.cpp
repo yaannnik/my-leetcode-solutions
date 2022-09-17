@@ -34,7 +34,6 @@ public:
             // cout << x << " " << y << endl;
             qu.pop();
 
-            unmark.insert(x * cols + y);
             for(int i = 0; i < 4; i++) {
                 int nx = x + dir[i][0], ny = y + dir[i][1];
                 if(nx >= 0 && nx < rows && ny >= 0 && ny < cols && board[nx][ny] == 'O') {

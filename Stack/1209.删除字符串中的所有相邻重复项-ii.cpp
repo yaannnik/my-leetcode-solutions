@@ -7,35 +7,29 @@ using namespace std;
 class Solution {
 public:
     string removeDuplicates(string s, int k) {
-        stack<int> cst; // 记录出现的字符
-        stack<int> nst; // 记录cst栈顶字符连续出现的次数
-
-        unordered_set<int> remove;
-
-        for(int i = 0; i < s.size(); i++) {
-            char ch = s[i];
-            if(!cst.empty() && ch == s[cst.top()]) {
-                nst.top() += 1;
-                cst.push(i);
-                if(nst.top() == k) {
-                    for(int j = 0; j < k; j++) {
-                        remove.insert(cst.top());
-                        cst.pop();
-                    }
-                    nst.pop();
-                }
-            } else {
-                nst.push(1);
-                cst.push(i);
-            }
-        }
+        int n = s.size();
+        stack<int> numStack;
 
         string res = "";
-        for(int i = 0; i < s.size(); i++) {
-            if(!remove.count(i)) {
-                res += s[i];
+
+        for(int i = 0; i < n; i++) {
+            char ch = s[i];
+
+            if(!res.empty() && ch == res.back()) {
+                numStack.top()++;
+                res += ch;
+                if(numStack.top() == k) {
+                    for(int i = 0; i < k; i++) {
+                        res.pop_back();
+                    }
+                    numStack.pop();
+                }
+            } else {
+                res += ch;
+                numStack.push(1);
             }
         }
+
         return res;
     }
 };
@@ -43,41 +37,30 @@ public:
 class FollowUp {
 public:
     string removeDuplicates(string s, int k) {
-        stack<int> cst;
-        stack<int> nst;
-
-        unordered_set<int> remove;
-
-        for(int i = 0; i < s.size(); i++) {
-            char ch = s[i];
-            if(!cst.empty() && ch == s[cst.top()]) {
-                nst.top() += 1;
-                cst.push(i);
-            } else {
-                if(!nst.empty() && nst.top() >= k) {
-                    int l = nst.top();
-                    for(int j = 0; j < l; j++) {
-                        remove.insert(cst.top());
-                        cst.pop();
-                    }
-                    nst.pop();
-                }
-                if(!cst.empty() && ch == s[cst.top()]) {
-                    nst.top() += 1;
-                    cst.push(i);
-                } else {
-                    nst.push(1);
-                    cst.push(i);
-                }
-            }
-        }
-
+        int n = s.size();
+        stack<int> cnt;
         string res = "";
-        for(int i = 0; i < s.size(); i++) {
-            if(!remove.count(i)) {
-                res += s[i];
+
+        for(int i = 0; i < n; i++) {
+            char ch = s[i];
+            if(!res.empty() && ch == res.back()) {
+                res += ch;
+                cnt.top()++;
+                if(cnt.top() == k) {
+                    for(int j = 0; j < k; j++) {
+                        res.pop_back();
+                    }
+                    cnt.pop();
+                    while(i + 1 < n && s[i + 1] == ch) {
+                        i++;
+                    }
+                }
+            } else {
+                res += ch;
+                cnt.push(1);
             }
         }
+
         return res;
     }
 };

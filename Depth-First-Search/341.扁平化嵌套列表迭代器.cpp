@@ -22,31 +22,36 @@ public:
 class NestedIterator {
 public:
     NestedIterator(vector<NestedInteger> &nestedList) {
-        dfs(nestedList);
-    }
-
-    void dfs(vector<NestedInteger> &nestedList) {
-        for(auto& nest : nestedList) {
-            if(nest.isInteger()) {
-                dq.push_back(nest.getInteger());
-            } else {
-                dfs(nest.getList());
-            }
+        for(auto list : nestedList) {
+            flatten(list);
         }
+        i = -1;
     }
 
     int next() {
-        int res = dq.front();
-        dq.pop_front();
-        return res;
+        i++;
+        return nums[i];
     }
 
     bool hasNext() {
-        return !dq.empty();
+        return i + 1 < nums.size();
     }
 
-    deque<int> dq;
+    void flatten(NestedInteger& list) {
+        if(list.isInteger()) {
+            nums.emplace_back(list.getInteger());
+            return;
+        }
+        vector<NestedInteger> v = list.getList();
+        for(auto i : v) {
+            flatten(i);
+        }
+    }
+
+    int i;
+    vector<int> nums;
 };
+
 
 /**
  * Your NestedIterator object will be instantiated and called as such:
