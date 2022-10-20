@@ -2,44 +2,38 @@
 #include <vector>
 #include <utility>
 #include <queue>
-#include <unordered_set>
 #include <unordered_map>
 using namespace std;
 
 class Solution {
 public:
     vector<vector<int>> verticalOrder(TreeNode* root) {
-        vector<vector<int>> res;
         if(!root) {
-            return res;
+            return {};
         }
-        queue<pair<int, TreeNode*>> qu;
-        qu.emplace(0, root);
+        int minCol = 0, maxCol = 0;
+        unordered_map<int, vector<int>> col2nodes;
+        queue<pair<TreeNode*, int>> qu; // node, col
+        qu.emplace(root, 0);
         while(!qu.empty()) {
-            auto [col, node] = qu.front();
+            auto [node, col] = qu.front();
             qu.pop();
-
-            col2nums[col].emplace_back(node->val);
-            uniqueCols.insert(col);
-
+            col2nodes[col].emplace_back(node->val);
             if(node->left) {
-                qu.emplace(col-1, node->left);
+                minCol = min(minCol, col - 1);
+                qu.emplace(node->left, col - 1);
             }
             if(node->right) {
-                qu.emplace(col+1, node->right);
+                maxCol = max(maxCol, col + 1);
+                qu.emplace(node->right, col + 1);
             }
         }
 
-        vector<int> sortedCols = vector<int>(uniqueCols.begin(), uniqueCols.end());
-        sort(sortedCols.begin(), sortedCols.end());
-
-        for(int& col : sortedCols) {
-            res.push_back(col2nums[col]);
+        // cout << "here" << endl;
+        vector<vector<int>> res;
+        for(int col = minCol; col <= maxCol; col++) {
+            res.emplace_back(col2nodes[col]);
         }
-
         return res;
     }
-
-    unordered_map<int, vector<int>> col2nums;
-    unordered_set<int> uniqueCols;
 };

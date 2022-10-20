@@ -20,6 +20,8 @@
 
 [57.插入区间](./Array/57.插入区间.cpp)
 
+[59.螺旋矩阵-ii](./Array/59.螺旋矩阵-ii.cpp)
+
 [118.杨辉三角](./Array/118.杨辉三角.cpp)
 
 [134.加油站](./Array/134.加油站.cpp)
@@ -270,6 +272,8 @@
 
 [90.子集-ii](./Depth-First-Search/90.子集-ii.cpp)
 
+[93.复原IP地址](./Depth-First-Search/93.复原IP地址.cpp)
+
 [131.分割回文串](./Depth-First-Search/131.分割回文串.cpp)
 
 [140.单词拆分-ii](./Depth-First-Search/140.单词拆分-ii.cpp)
@@ -334,7 +338,9 @@
 
 [359.日志速率限制器](./Design/359.日志速率限制器.cpp)
 
-[380.O(1)20时间插入、删除和获取随机元素](./Design/380.O(1)时间插入、删除和获取随机元素.cpp)
+[380.O(1)时间插入、删除和获取随机元素](./Design/380.O(1)时间插入、删除和获取随机元素.cpp)
+
+[381.O(1)时间插入、删除和获取随机元素-允许重复](./Design/381.O(1)时间插入、删除和获取随机元素-允许重复.cpp)
 
 [398.随机数索引](./Design/398.随机数索引.cpp)
 
@@ -378,19 +384,29 @@
 
 [62.不同路径](./Dynamic-Programming/62.不同路径.cpp)
 
+[63.不同路径-ii](./Dynamic-Programming/63.不同路径-ii.cpp)
+
 [64.最小路径和](./Dynamic-Programming/64.最小路径和.cpp)
 
+[70.爬楼梯](./Dynamic-Programming/70.爬楼梯.cpp)
+
 [72.编辑距离](./Dynamic-Programming/72.编辑距离.cpp)
+
+[91.解码方法](./Dynamic-Programming/91.解码方法.cpp)
 
 [97.交错字符串](./Dynamic-Programming/97.交错字符串.cpp)
 
 [115.不同的子序列](./Dynamic-Programming/115.不同的子序列.cpp)
+
+[120.三角形最小路径和](./Dynamic-Programming/120.三角形最小路径和.cpp)
 
 [121.买卖股票的最佳时机](Dynamic-Programming/买卖股票的最佳时机/121.买卖股票的最佳时机.cpp)
 
 [122.买卖股票的最佳时机-ii](Dynamic-Programming/买卖股票的最佳时机/122.买卖股票的最佳时机-ii.cpp)
 
 [123.买卖股票的最佳时机-iii](Dynamic-Programming/买卖股票的最佳时机/123.买卖股票的最佳时机-iii.cpp)
+
+[132.分割回文串-ii](./Dynamic-Programming/132.分割回文串-ii.cpp)
 
 [139.单词拆分](./Dynamic-Programming/139.单词拆分.cpp)
 
@@ -562,7 +578,7 @@
 
 [24.两两交换链表中的节点](./Linked-List/24.两两交换链表中的节点.cpp)
 
-[25.k-个一组翻转链表](./Linked-List/25.k-个一组翻转链表.cpp)
+[25.k个一组翻转链表](./Linked-List/25.k个一组翻转链表.cpp)
 
 [61.旋转链表](./Linked-List/61.旋转链表.cpp)
 
@@ -776,6 +792,8 @@
 
 [11.盛水最多的容器](./Sliding-Window/11.盛水最多的容器.cpp)
 
+[28.找出字符串中第一个匹配项的下标](./Sliding-Window/28.找出字符串中第一个匹配项的下标.cpp)
+
 [30.串联所有单词的子串](./Sliding-Window/30.串联所有单词的子串.cpp)
 
 [76.最小覆盖子串](./Sliding-Window/76.最小覆盖子串.cpp)
@@ -890,6 +908,8 @@
 
 [682.棒球比赛](./Stack/682.棒球比赛.cpp)
 
+[716.最大栈](./Stack/716.最大栈.cpp)
+
 [726.原子的数量](./Stack/726.原子的数量.cpp)
 
 [844.比较含退格的字符串](./Stack/844.比较含退格的字符串.cpp)
@@ -914,11 +934,17 @@
 
 ## String
 
+[6.Z字形变换.cpp](./String/6.Z字形变换.cpp)
+
 [12.整数转罗马数字](./String/12.整数转罗马数字.cpp)
 
 [13.罗马数字转整数](./String/13.罗马数字转整数.cpp)
 
+[14.最长公共前缀](./String/14.最长公共前缀.cpp)
+
 [38.外观数列](./String/38.外观数列.cpp)
+
+[58.最后一个单词的长度](./String/58.最后一个单词的长度.cpp)
 
 [67.二进制求和](./String/67.二进制求和.cpp)
 
@@ -1081,6 +1107,8 @@
 [145.二叉树的后序遍历](Tree/前中后遍历/145.二叉树的后序遍历.cpp)
 
 [173.二叉搜索树迭代器](./Tree/173.二叉搜索树迭代器.cpp)
+
+[99.二叉树的右视图](./Tree/199.二叉树的右视图.cpp)
 
 [208.实现Trie(前缀树)](./Tree/208.实现Trie(前缀树).cpp)
 
