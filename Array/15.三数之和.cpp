@@ -23,7 +23,7 @@ public:
         int left = l, right = n - 1;
 
         while(left < right) {
-            // left cannot be euqal to right
+            // left cannot be equal to right
             if(num + nums[left] + nums[right] == 0) {
                 res.push_back({num, nums[left], nums[right]});
                 while(left < right && nums[left] == nums[left + 1]) {
@@ -38,8 +38,16 @@ public:
                 while(left < right && nums[left] == nums[left + 1]) {
                     left++;
                 }
+                // 此处不能right--，否则若出现nums[left + 1] == nums[right]的情况会报错
+                // while(left < right && nums[right] == nums[right - 1]) {
+                //     right--;
+                // }
                 left++;
             } else {
+                // 同理
+                // while(left < right && nums[left] == nums[left + 1]) {
+                //     left++;
+                // }
                 while(left < right && nums[right] == nums[right - 1]) {
                     right--;
                 }
