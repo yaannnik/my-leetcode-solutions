@@ -1194,22 +1194,22 @@
 
 ## Union Find
 
-[200.岛屿数量](./Union-Find/200.岛屿数量.cpp)
+[200.Number-of-Islands](./Union-Find/200.Number-of-Islands.cpp)
 
-[261.以图判树](./Union-Find/261.以图判树.cpp)
+[261.Graph-Valid-Tree](./Union-Find/261.Graph-Valid-Tree.cpp)
 
-[305.岛屿数量-ii](./Union-Find/305.岛屿数量-ii.cpp)
+[305.Number-of-Islands-ii](./Union-Find/305.Number-of-Islands-ii.cpp)
 
-[323.无向图中连通分量的数目](./Union-Find/323.无向图中连通分量的数目.cpp)
+[323.Number-of-Connected-Components-in-an-Undirected-Graph](./Union-Find/323.Number-of-Connected-Components-in-an-Undirected-Graph.cpp)
 
-[547.省份数量](./Union-Find/547.省份数量.cpp)
+[547.Number-of-Provinces](./Union-Find/547.Number-of-Provinces.cpp)
 
-[684.冗余连接](./Union-Find/684.冗余连接.cpp)
+[684.Redundant-Connection](./Union-Find/684.Redundant-Connection.cpp)
 
-[721.账户合并](./Union-Find/721.账户合并.cpp)
+[721.Accounts-Merge](./Union-Find/721.Accounts-Merge.cpp)
 
-[765.情侣牵手](./Union-Find/765.情侣牵手.cpp)
+[765.Couples-Holding-Hands](./Union-Find/765.Couples-Holding-Hands.cpp)
 
-[1319.连通网络的操作次数](./Union-Find/1319.连通网络的操作次数.cpp)
+[1319.Number-of-Operations-to-Make-Network-Connected](./Union-Find/1319.Number-of-Operations-to-Make-Network-Connected.cpp)
 
-[1631.最小体力消耗路径](./Union-Find/1631.最小体力消耗路径.cpp)
+[1631.Path-With-Minimum-Effort](./Union-Find/1631.Path-With-Minimum-Effort.cpp)

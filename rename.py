@@ -11,5 +11,5 @@ def replace_spaces_with_hyphens(folder_path):
                 print(f'Renamed: {filename} -> {new_filename}')
 
 if __name__ == "__main__":
-    target_folder = "Monotonic-Stack"
+    target_folder = "Union-Find"
     replace_spaces_with_hyphens(target_folder)
